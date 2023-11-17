@@ -1,0 +1,86 @@
+body,
+html {
+	height: 100%;
+	margin: 0;
+	font-family: 'Arial', sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(to right, #6dd5ed, #2193b0);
+	color: white;
+}
+
+.cat-image {
+	width: 400px;
+	height: auto;
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: -1;
+}
+
+.cat-image:first-of-type {
+	left: 10px;
+}
+
+.cat-image:last-of-type {
+	right: 10px;
+}
+
+.main-container {
+	text-align: center;
+	padding: 20px;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 15px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	max-width: 1000px; /* Zwiększenie maksymalnej szerokości */
+	width: 90%; /* Zwiększenie procentowej szerokości */
+	position: relative;
+}
+
+h1 {
+	margin-bottom: 20px;
+}
+
+#loadVideo {
+	background-color: #008cba;
+	color: white;
+	padding: 15px 25px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 18px;
+	transition: background-color 0.3s;
+}
+
+#loadVideo:hover {
+	background-color: #005f73;
+}
+
+iframe {
+	width: 100%; /* Szerokość względem kontenera */
+	height: 450px; /* Zwiększenie wysokości */
+	border-radius: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+	.cat-image {
+		width: 300px;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	iframe {
+		height: 300px; /* Dostosowanie wysokości dla mniejszych ekranów */
+	}
+
+	.cat-image {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.main-container {
+		padding: 15px;
+	}
+}
